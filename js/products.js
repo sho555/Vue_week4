@@ -46,11 +46,11 @@ const app = {
         })
     },
     updateProducts() {
-      let url = `${this.apiUrl}/api/${this.apiPath}/admin/product`;
+      let url = `https://${this.apiUrl}/api/${this.apiPath}/admin/product`;
       let http = 'post';
 
       if (!this.newProd) {
-        url = `${this.apiUrl}/api/${this.apiPath}/admin/product/${this.tempProduct.id}`;
+        url = `https://${this.apiUrl}/api/${this.apiPath}/admin/product/${this.tempProduct.id}`;
         http = 'put'
       }
 
@@ -80,7 +80,7 @@ const app = {
       }
     },
     delProduct() {
-      const url = `${this.apiUrl}/api/${this.apiPath}/admin/product/${this.tempProduct.id}`;
+      const url = `https://${this.apiUrl}/api/${this.apiPath}/admin/product/${this.tempProduct.id}`;
 
       axios.delete(url).then((res) =>{
         alert(res.data.message);
@@ -92,7 +92,7 @@ const app = {
     },
     createImages(){
       this.tempProduct.imagesUrl = [];
-      this.tempProduct.imagesUrl.pust('');
+      this.tempProduct.imagesUrl.push('');
     }
   },
   components: {
