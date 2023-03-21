@@ -1,5 +1,5 @@
 import {createApp} from 'https://cdnjs.cloudflare.com/ajax/libs/vue/3.2.45/vue.esm-browser.min.js';
-import pagination from './pagination.js'
+import Pagination from './pagination.js'
 
 let productModal = {};
 let delProductModal = {};
@@ -96,7 +96,7 @@ const app = {
     }
   },
   components: {
-    pagination
+    Pagination
   },
 
   mounted() {
